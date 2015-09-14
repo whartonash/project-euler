@@ -11,7 +11,7 @@ function solveProblem1() {
 
 	var num, multiples = [];
 
-	for (var num = 1; num < 1000; num++) {
+	for (num = 1; num < 1000; num++) {
 		if (num % 3 == 0 || num % 5 == 0) {
 			multiples.push(num);
 		}
@@ -35,7 +35,7 @@ function solveProblem1() {
 function solveProblem2() {
 
 	// Generate Fibonacci terms whose value do not exceed four million 
-	var sum = 0, fibArray = [1, 2], nextFibElem = 3;
+	var i, sum = 0, fibArray = [1, 2], nextFibElem = 3;
 	
 	do {
 		fibArray.push(nextFibElem);
@@ -46,9 +46,22 @@ function solveProblem2() {
 
 	// Sum the even valued terms - utilising the observed odd-even pattern of 
 	// the Fibonacci sequence (OEOOEOOEOOE...), 
-	for (var i = 1; i < fibArray.length; i += 3) {
+	for (i = 1; i < fibArray.length; i += 3) {
 		sum += fibArray[i];
 	}
 
 	return sum;
+}
+
+
+/*
+ * Problem 3 - Largest prime factor
+ * 
+ * The prime factors of 13195 are 5, 7, 13 and 29.
+ * 
+ * What is the largest prime factor of the number 600851475143 ?
+ */
+
+function solveProblem3() {
+	// TODO
 }
