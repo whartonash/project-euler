@@ -9,15 +9,15 @@
 
 function solveProblem1() {
 
-	var num, multiples = [];
+    var num, multiples = [];
 
-	for (num = 1; num < 1000; num++) {
-		if (num % 3 == 0 || num % 5 == 0) {
-			multiples.push(num);
-		}
-	}
+    for (num = 1; num < 1000; num++) {
+        if (num % 3 == 0 || num % 5 == 0) {
+            multiples.push(num);
+        }
+    }
 
-	return multiples.reduce(function (sum, val) { return sum += val; }, 0);
+    return multiples.reduce(function (sum, val) { return sum += val; }, 0);
 }
 
 
@@ -34,23 +34,23 @@ function solveProblem1() {
 
 function solveProblem2() {
 
-	// Generate Fibonacci terms whose value do not exceed four million 
-	var i, sum = 0, fibArray = [1, 2], nextFibElem = 3;
-	
-	do {
-		fibArray.push(nextFibElem);
-		nextFibElem = fibArray[fibArray.length - 1] + fibArray[fibArray.length - 2]
-	}
-	while (nextFibElem < 4000000);
+    // Generate Fibonacci terms whose value do not exceed four million 
+    var i, sum = 0, fibArray = [1, 2], nextFibElem = 3;
+
+    do {
+        fibArray.push(nextFibElem);
+        nextFibElem = fibArray[fibArray.length - 1] + fibArray[fibArray.length - 2]
+    }
+    while (nextFibElem < 4000000);
 
 
-	// Sum the even valued terms - utilising the observed odd-even pattern of 
-	// the Fibonacci sequence (OEOOEOOEOOE...), 
-	for (i = 1; i < fibArray.length; i += 3) {
-		sum += fibArray[i];
-	}
+    // Sum the even valued terms - utilising the observed odd-even pattern of 
+    // the Fibonacci sequence (OEOOEOOEOOE...), 
+    for (i = 1; i < fibArray.length; i += 3) {
+        sum += fibArray[i];
+    }
 
-	return sum;
+    return sum;
 }
 
 
@@ -63,5 +63,5 @@ function solveProblem2() {
  */
 
 function solveProblem3() {
-	// TODO
+    // TODO
 }
