@@ -38,7 +38,7 @@ function solveProblem2() {
 	var sum = 0, fibArray = [1, 2], nextFibElem = 3;
 	
 	do {
-		fibArray = addNextFibonacciElem(fibArray);
+		fibArray.push(nextFibElem);
 		nextFibElem = fibArray[fibArray.length - 1] + fibArray[fibArray.length - 2]
 	}
 	while (nextFibElem < 4000000);
